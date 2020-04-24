@@ -27,17 +27,17 @@ pipeline {
         success {
             // 빌드의 결과가 성공일경우 
             //resultSlackSend("good", "SUCCESS")
-            slackSend "PipelineTest10 - Success"
+            slackSend color: '#00FF00', message: 'PipelineTest10 - Success'
         }
         failure {
             // 빌드의 결과가 실패일경우 
             //resultSlackSend("danger", "FAILURE")
-            slackSend "PipelineTest10 - FAILURE"
+            slackSend color: '#FF0000', message: 'PipelineTest10 - FAILURE'
         }
         aborted {
             // 빌드를 중간에 멈추는 경우
             //resultSlackSend("warning", "ABORTED")
-            slackSend "PipelineTest10 - ABORTED"
+            slackSend color: '#FFFF00', message: 'PipelineTest10 - ABORTED'
         }
     }
 }
